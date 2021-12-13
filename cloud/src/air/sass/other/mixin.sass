@@ -1,0 +1,50 @@
+@mixin fx($jsc)
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: $jsc
+    
+@mixin ts($s)
+    transition: all $s ease-in-out
+
+.fx-r,
+.fx-l,
+.fx-c,
+.fx-s
+    display: flex
+    align-items: center
+    justify-content: end
+.fx-l
+    justify-content: start
+.fx-c
+    justify-content: center
+.fx-s
+    justify-content: space-between
+
+.br
+    border-radius: 4px
+    
+.hand
+    cursor: pointer
+
+.box
+    padding: $dist_s $dist
+    display: inline-block
+    text-align: center
+    user-select: none
+    cursor: pointer
+    border-radius: 0.25rem
+    transition: all .2s ease-in-out
+
+.middle
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+.i-fix
+    position: relative
+    &::before
+        position: absolute
+        @extend .middle
+        

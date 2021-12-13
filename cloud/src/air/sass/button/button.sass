@@ -1,0 +1,90 @@
+button
+    user-select: none
+
+button
+    color: $html_Txt
+    border: 2px solid #f2f2f2
+    background: #f2f2f2
+    &:focus
+        background: #fff
+
+button,
+.btn_fff,
+.btn_primary_thin,
+.btn_def_thin,
+.btn_primary
+    @extend .s1
+    text-indent: 3px
+    font-weight: bold
+    border-radius: 5px
+    letter-spacing: 3px
+    padding: $dist_s $dist_x2
+    // box-shadow: 0px 2px 8px -2px #f4ffffDE
+
+    &:active,
+    &:focus
+        outline: 0
+        box-shadow: 0 0 0 0.11rem $primary
+
+.btn_primary_thin
+    background: $primary_Thin
+    border: 2px solid $primary_Thin
+    &,
+    i
+        color: $primary_Hover
+
+    &:hover
+        // background: #ecf7ff
+        // border-color: #ecf7ff
+
+.btn_primary
+    color: #FFF
+    background: $primary
+    border-color: $primary
+    
+    &:active,
+    &:focus
+        color: $primary_Hover
+        background: $primary_Thin
+        box-shadow: 0 0 0 0.25rem $primary_Br
+    &:hover
+        background: $primary_Hover
+        border-color: $primary_Hover
+    &:focus-visible
+        outline-color: $primary_Half
+
+.btn_def_thin
+    outline: none
+    background: none
+    border-color: transparent
+
+    &,
+    i
+        // color: #717275
+
+    &:hover 
+        background: none !important
+        border-color: transparent !important
+
+        &,
+        i
+            color: $primary_Hover   
+
+
+.btn_fff
+    @extend .s4
+    outline: $primary_Half
+    background: #FFF
+    border-color: #FFF
+    &:hover
+        color: #FFF
+        background: $primary
+        border-color: $primary
+    &:focus,
+    &:active,
+    &:focus-visible
+        color: #FFF
+        background: $primary_Hover
+        border-color: $primary_Hover
+        outline-color: $primary_Half !important
+        

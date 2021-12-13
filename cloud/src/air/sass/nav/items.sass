@@ -1,0 +1,137 @@
+
+    
+.items
+    @include fx('start')
+    li
+        @extend .box
+        @include ts(.2s)
+        overflow: hidden
+        
+        min-width: 5em
+        border-radius: 5em
+        margin-right: $dist
+        margin-bottom: $dist_s * 3
+        background: $hui_Stand
+
+        *
+            // color: $primary !important
+    
+    li:hover,
+    li:focus,
+    li:active,
+    .active
+        background: $primary
+        *
+            color: rgba(255, 255, 255, 0.94) !important
+    .active:hover
+        background: $primary_Hover
+
+.items-cate
+    text-align: center
+    li
+        width: 15%
+    span
+        width: 100%
+        height: 100%
+        display: block
+        padding-left: 6px
+        letter-spacing: 6px
+.item-wrapper
+    margin: 0px (- $dist_s)
+.items-service
+    // justify-content: space-between
+    li
+        margin-left: $dist_s
+        margin-right: $dist_s
+        padding-left: 3em
+        padding-right: 3em
+        position: relative
+        
+        &::after
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            width: 0px
+            height: 100%
+            background: $primary
+
+    li:hover,
+    li:focus,
+    li:active
+        &::after
+            opacity: 0.3
+            background: rgba(255, 255, 255, 0.94)
+            
+    .active::after
+        opacity: 0.3
+        background: rgba(255, 255, 255, 0.94)
+        
+
+.items-service-empty
+    @extend .box
+    width: 100%
+    height: 30vh
+    margin-top: 2px
+    background: $hui
+    position: relative
+
+    span
+        @extend .middle
+
+
+$shop: #b9521e
+$shop_Hover: #a64718
+.item-shop,
+.item-service-shop
+    li.active
+        background: $shop !important
+
+        &:hover
+            background: $shop_Hover !important
+        
+
+.contact_menu
+    height: 0
+    width: 100%
+    z-index: 600
+    position: relative
+
+    .nav_y
+        max-height: 18em
+        overflow-y: scroll
+
+    ul
+        z-index: 601
+        position: absolute
+        width: 100%
+        top: 0
+        left: 0
+        overflow: hidden
+        border-radius: 8px
+        // border: 1px solid #E7E7E7
+        box-shadow: 0px 3px 9px -1px rgba(0, 0, 0, 0.32) 
+        li
+            // border-bottom: 1px solid #e8eaec
+
+        li:last-child 
+            @extend .hand
+            background: $hui
+            padding: 0.5em 2em
+
+        .cm_item
+            @extend .hand
+            background: #FFF
+            padding: 0.5em 2em
+
+            &:hover,
+            &:hover *
+                color: #FFF !important
+                background: $primary
+    .contact_menu_empty
+        li
+            @extend .fx-c
+            min-height: 5em
+            &:hover,
+            &:hover *
+                background: $hui

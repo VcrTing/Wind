@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "msg_sms",
+  "info": {
+    "name": "MsgSms",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "msg_ch": {
+      "type": "richtext"
+    },
+    "msg_en": {
+      "type": "richtext"
+    },
+    "header": {
+      "type": "string"
+    },
+    "typed": {
+      "type": "integer",
+      "default": 1
+    },
+    "task_sms": {
+      "via": "msg_sms",
+      "collection": "task-sms"
+    },
+    "msg_group": {
+      "via": "msg_sms",
+      "model": "msg-group"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+$attchW: 120px
+$inputBr: #c2c4c7
+    
+input::-webkit-input-placeholder
+    @extend .tih
+    // color: $placeholder
+
+label
+    @extend .fx-l
+    @extend .tis
+    // color: #616364
+    line-height: 2.4em
+
+input,
+.input,
+select,
+.select,
+textarea,
+.textarea
+    @extend .s4
+    @extend .txt
+    font-size: $fs
+    padding: 0.22em 1em
+    border-radius: 5px
+    margin-bottom: $dist
+    min-height: 2.2em !important
+    border: 1px solid $html_Br // $inputBr 
+    &:hover,
+    &:focus,
+    &:visited,
+    &:focus-visible,
+        outline-color: #e1bd75
+        outline-width: 1px !important
+
+textarea,
+.textarea
+    resize: vertical
+
+textarea:focus-visible,
+.textarea:focus-visible
+    // outline-color: #d9d9d9 !important
+    outline-width: 1px
+
+input:-internal-autofill-previewed 
+    background: none !important
+
+select,
+.select
+    min-width: 8em
+    background: $hui_Stand // $hui
+    &:focus,
+    &:active
+        background: #FFF
+
+.input_tip_new,
+.input_tip_success
+    @extend .input
+    border: 1px solid transparent
+    
+.input_tip_new
+    i
+        color: $new_Light
+.input_tip_success
+    i
+        color: $success_Light
+
+
+.input-attch
+    @extend .fx-l
+    .attch_left
+        width: 35% !important
+        min-width: 6em
+        float: left
+        border-right-width: 0px
+        border-top-right-radius: 0px
+        border-bottom-right-radius: 0px
+    .attch_right
+        width: 65%
+        float: left
+        border-left-width: 0px
+        border-top-left-radius: 0px
+        border-bottom-left-radius: 0px
+
+.form-must
+    width: 1em
+    color: $accent
+    margin-left: 4px
+    text-align: center
+    display: inline-block
+    

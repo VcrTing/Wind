@@ -1,0 +1,23 @@
+{
+    "kind": "collectionType",
+    "collectionName": "sms",
+    "info": {
+      "name": "Sms",
+      "description": ""
+    },
+    "options": {
+      "increments": true,
+      "timestamps": true,
+      "draftAndPublish": true
+    },
+    "attributes": {
+      "named": {
+        "type": "string"
+      },
+      "status": {
+        "type": "boolean",
+        "default": true
+      }
+    }
+  }
+  

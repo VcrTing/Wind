@@ -1,0 +1,49 @@
+{
+    "kind": "collectionType",
+    "collectionName": "strapi_sms_task_million",
+    "info": {
+      "name": "SmsTaskMillion",
+      "description": ""
+    },
+    "options": {
+      "increments": true,
+      "timestamps": true,
+      "draftAndPublish": true
+    },
+    "attributes": {
+      "ready_send": {
+        "type": "boolean",
+        "default": false
+      },
+      "finish_send": {
+        "type": "boolean",
+        "default": false
+      },
+      "msg_sms_id": {
+        "type": "string"
+      },
+      "send_date": {
+        "type": "date"
+      },
+      "send_hour": {
+        "type": "integer"
+      },
+      "send_res_success": {
+        "type": "json"
+      },
+      "status": {
+        "type": "boolean",
+        "default": true
+      },
+      "contact_json": {
+        "type": "json"
+      },
+      "send_res_fail": {
+        "type": "json"
+      },
+      "code": {
+        "type": "string"
+      }
+    }
+  }
+  

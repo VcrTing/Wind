@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contacts",
+  "info": {
+    "name": "Contact",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "named": {
+      "type": "string"
+    },
+    "area": {
+      "type": "integer",
+      "default": 852
+    },
+    "phoned": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "string"
+    },
+    "birth": {
+      "type": "date"
+    },
+    "status": {
+      "type": "boolean",
+      "default": true
+    },
+    "gender": {
+      "type": "integer",
+      "default": 1
+    },
+    "star": {
+      "type": "boolean",
+      "default": false
+    },
+    "mark": {
+      "type": "string"
+    }
+  }
+}

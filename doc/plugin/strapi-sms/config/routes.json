@@ -1,0 +1,42 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/strapi_sms",
+      "handler": "strapi-sms.index",
+      "config": {
+        "policies": [],
+        "prefix": "my-prefix"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/strapi_sms/msg",
+      "handler": "strapi-sms.msg",
+      "config": {
+        "policies": [],
+        "prefix": "my-prefix"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/strapi_sms/create",
+      "handler": "strapi-sms.createSms",
+      "config": {
+        "policies": [],
+        "prefix": "my-prefix"
+      }
+    },
+
+
+    {
+      "method": "GET",
+      "path": "/sms_conf",
+      "handler": "sms_conf.find",
+      "config": {
+        "policies": [],
+        "prefix": "my-prefix"
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+创建 COLLECTIONTYPE 并添加属于自己的 Api:
+  1.
+    确认 API 名字
+  2.
+    在 Strapi Admin 界面创建好 Collection Type
+  3.
+    然后 点击 /settings/USERS & PERMISSIONS PLUGIN/roles 分配好 权限
+  4.
+    打开 项目 文件夹
+  5.
+    进去 @/api/NAME/controllers/product.js
+    写一个新的方法
+    # 他默认存在 find/count/findOne/create/update/delete 方法
+    # 尽量不要复写他的方法
+  6.
+    新建一个自己的方法
+  7.
+    进去 @/api/NAME/config/routes.json 配置 路由
+  8.
+    路由 handle 指向你的方法
+
+
+重写:
+  从strapi admin 创建内容不会经过重写过的后台
+
+request:
+  ctx.host: 127.0.0.1:1337 # hostname = 1277.0.0.1
+  ctx.path: /products # endpoint
+  ctx.href: http://127.0.0.1:1337/products # full path
+  ctx.originalUrl: /products?_limit=2
+  ctx.querystring: _limit=2
+  ctx.fresh: Boolean
+  ctx.protocol: http # or https
+
+response:
+  ctx.redirect('/login'): 重定向
+    #  
+  ctx.body:
+    Stream 流: 
+
+  ctx.type:
+    # 可以传输 不同 类型
+
+全局变量请看:
+  https://strapi.io/documentation/developer-docs/latest/developer-resources/global-strapi/api-reference.html#strapi-admin

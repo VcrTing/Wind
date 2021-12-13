@@ -1,0 +1,38 @@
+ul.breadcrumb
+    @extend .fx-l 
+    user-select: none
+    *
+        // color: #5b5e60
+    li
+        display: inline-block !important 
+        @extend .fx-l
+        padding-bottom: 12px
+        i
+            height: 1em !important
+            // color: #a0a4a6
+    li:last-child
+        *
+            // color: #242425 !important
+
+.pager
+    @extend .tip
+    user-select: none
+    ul
+        @extend .fx-c
+        li
+            padding: $dist_s
+            a
+                @extend .s1
+                @extend .hand
+                border-radius: 6px
+                background: #f8f9fb
+                padding: $dist_s $dist
+
+            .active
+                color: #FFF
+                background: $primary_Hover
+                // font-weight: bold
+                box-shadow: 0px 1px 4px -3px rgba(0, 0, 0, 0.12)
+        li:last-child,
+        li:first-child
+            transform: scale(0.95)

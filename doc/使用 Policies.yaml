@@ -1,0 +1,41 @@
+policies:
+  全程跟踪 你的方法，
+  异步执行，
+  全程干预 context # ctx
+  可以干预 返回的 body # ctx.body = XXX
+  可以拦截 某用户 / 未登录用户
+  可以拦截 状态 Code # 如 404
+
+全局 policies:
+  /config/policies/xxx
+  例子:
+    is-login.js
+
+  使用:
+    打开 /api/NAME/config/routes.json
+
+    {
+      "method": "GET",
+      "path": "/products/search/:q",
+      "handler": "product.search",
+      "config": {
+        "policies": [ "global::is-login", "has-params", "custom-404" ]
+      }
+    },
+
+    # 全局 policies 前面要加 global:: 关键语句
+
+    # 非全局则不需要加
+
+非全局 policies:
+  /api/NAME/config/policies/xxx
+  例子:
+    custom-404.js
+  
+  使用:
+      "config": {
+        "policies": [ "global::is-login", "has-params", "custom-404" ]
+      }
+
+想知道更多详情，请访问:
+  https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#policies

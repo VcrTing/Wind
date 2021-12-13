@@ -1,0 +1,70 @@
+新建一个 Plugin:
+  sudo npm run strapi generate:plugin strapi-sms
+
+加入 Model:
+  cd /plugins/YOU_PLUGIN/models
+  vim NAME.settings.json
+
+  创建一个 NAME 的 model
+
+  # 内容写法跟其他 Model 写法一样
+
+打开 Plugin 访问链接:
+  进去 admin
+  进去 Settings
+  进去 Roles
+  进去 public 
+  看到 自己的 Plugin
+
+  选取要打开的路由，然后保存
+
+  # Plugin 的 访问 Link 可以在这个面板的 右边 看到
+
+Plugin 加入:
+  sudo npm run build
+  # 重建 Admin
+
+
+新建 API:
+  1.
+    在 controller/strapi-sms.js 里 新建一个方法
+  2.
+    在 config/routes.json 中 新建路由
+  3.
+    在 Roles 中启用该 路由
+
+连接 Service:
+  # 本地 Plugin 的 Model
+  await strapi.entityService.find(
+            { },
+            { model: 'plugins::strapi-sms.sms' }
+        )
+  
+  # 其他 Model
+  await strapi.entityService.find(
+            { },
+            { model: 'product' }
+        )
+
+
+  # 第一个参数通常是 Params
+
+Admin 面板:
+  # React 框架
+  # 热启动: npm run develop -- --watch-admin
+  https://strapi.io/documentation/developer-docs/latest/development/local-plugins-customization.html#front-end-development
+  
+  局内使用全局变量: 
+    { strapi.currentLanguage } = en-US
+
+  弹出全局消息:
+    strapi.notification.toggle({
+      title: '提示'
+      message: 'Hi, msg from Plugin.'
+    });
+
+    消息类型:
+      strapi.notification.error('app.notification.error');
+      strapi.notification.info('app.notification.info');
+      strapi.notification.success('app.notification.success');
+      strapi.notification.warning('app.notification.warning');

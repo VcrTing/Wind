@@ -1,0 +1,101 @@
+query:
+  serices 内部的 对于数据操作的 工具集合
+
+controller 与 service:
+  一个 controller 方法 对应一个  service 方法
+  但是
+  一个 controller 里面可以调用多个不同 api 中 service 中的 方法
+
+
+全局可用变量:
+    1.
+        strapi
+        # strapi 全局变量
+
+    
+
+参数:
+  querys:
+    传入参数，Object
+    例子:
+      { _limit: 1, age_gt: 18 }
+      # 限定一个
+      # 年龄 大于 18
+  populate:
+    第二个参数，未知数据
+    # 可以不传入
+
+简易查找:
+    find:
+        查找方法
+        strapi.query('NAME').find(params, populate):
+            取出数据
+
+    findOne:
+        查找某一个，返回 Object
+        strapi.query('restaurant').findOne(params, populate):
+            取出查找 某一个的数据
+
+    count:
+        return strapi.query('restaurant').count(params):
+            取出某模型数据内有多少条，
+            params 可以进行筛选  
+
+create:
+    用于创建实例
+    # await strapi.query('restaurant').create(data)
+
+    data:
+        传入参数，Object
+
+        例子:
+            { named: '茶餐厅', addr: '天虹路28号', category: 1 }
+            # 餐厅名字
+            # 餐厅地址
+            # 餐厅类型
+
+    { files } = {}:
+        如果有文件，则有数据，否则赋予默认值 { }
+
+    验证数据:
+        await strapi.entityValidator.validateEntityCreation(
+            strapi.models.NAME, # 传入某模型
+            data, # 传入数据
+            {
+              # 简单验证 Object 参数
+            }
+        )
+        # 返回值 = 验证后的 data
+
+    entry = await strapi.query('NAME').create( data ):
+        此方法用于执行新增
+
+    文件的加入:
+        await strapi.entityService.uploadFiles(
+            entry, # 创建后的 数据
+            files, # 文件对象
+            {
+                model: 'NAME', # 指定加入某 模型
+                # if you are using a plugin's model you will have to add the `source` key (source: 'users-permissions')
+            }
+        );
+
+        # 文件加入后，需要重新 查询一次 以确保更新了 文件字段
+
+update:
+    用于修改实例
+    entry = await strapi.query('restaurant').update({ id: entity.id }, data)
+        执行修改
+
+    步骤:
+        1.
+            查询出某一数据
+        2.
+            验证一下该条数据
+        3.
+            执行 update 方法
+        4.
+            判断加入 文件
+        5.
+            返回 更新后 的数据
+          

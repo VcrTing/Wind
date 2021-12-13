@@ -1,0 +1,90 @@
+
+.v_menu_pc
+    
+    cursor: pointer
+    user-select: none
+    // box-shadow: -2px 0px 6px -2px rgba(0, 0, 0, 0.18)
+
+    i
+        top: 50%
+        width: 1em
+        height: 1em
+        right: $dist
+        position: relative
+        transform: translateY(-50%)
+        &::before
+            @extend .middle
+    
+    a,
+    span
+        padding-left: 1.5em
+
+    .menu_header,
+    .menu_content
+        @include ts(.1s)
+            
+        padding: 0.3em 0.5em
+        width: 100% !important
+        position: relative
+
+        i.v_mark
+            left: $dist
+            position: absolute
+        
+        i.v_trg
+            @include ts(.4s)
+            position: absolute
+
+        &:hover
+            background: $primary_Thin
+
+    .menu_header
+        margin-top: 0.2em
+        padding: 0.5em
+
+    .menu_content
+        &::before
+            position: absolute
+            content: ''
+            top: 50%
+            left: 0
+            width: 6px
+            height: 2em
+            transform: translateY(-50%)
+
+    .menu_item
+        .collapsed
+            i.v_trg
+                // transform: rotate(90deg)
+
+    // .menu_header:focus,
+    // .menu_header:active,
+    .menu_active,
+    .menu_active:hover
+        background: #f5f5f5
+        *
+            @extend .txt
+        &::before
+            background: $primary
+
+    .menu_active:focus,
+    .menu_active:active
+        background: #ecf5ff
+        *
+            color: $primary_Hover
+    
+    .menu_content
+        padding-left: $dist
+
+    .collapse
+        @extend .s4
+        max-height: 0em
+        overflow: hidden
+
+    .active
+        max-height: 5em
+
+    .active-header 
+        i.v_trg
+            transform: rotate(90deg) translateX(-50%)
+

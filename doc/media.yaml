@@ -1,0 +1,27 @@
+Upload:
+  https://strapi.io/documentation/developer-docs/latest/development/plugins/upload.html
+
+获取所有:
+  /upload/files
+获取单个:
+  /upload/files/ID
+获取文件:
+  /uploads/large_0013_2e6e2248b0.jpg
+  
+上传:
+  一般通过 Form 表单上传
+
+上传 通过 FormData:
+  const form = new FormData()
+  const img_dom = document.getElementById('img')
+
+  # 塞入 图片，可能是多图
+  for (let i= 0; i< img_dom.files.length; i++ ) {
+    const f = img_dom.files[i]
+    formData.append(`files.${img_dom.name}`, f, f.name)
+  }
+
+  # 把 数据这样 塞进去
+  form.append('data', JSON.stringfy(DATA))
+  
+  # 然后把 Form 上传

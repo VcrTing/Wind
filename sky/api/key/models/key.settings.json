@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "keys",
+  "info": {
+    "name": "Key",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "api_key": {
+      "type": "string"
+    },
+    "api_token": {
+      "type": "string"
+    },
+    "sender": {
+      "type": "string"
+    },
+    "sender_note": {
+      "type": "string"
+    },
+    "typed": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "api_token_end": {
+      "type": "string"
+    }
+  }
+}

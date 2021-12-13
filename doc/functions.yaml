@@ -1,0 +1,14 @@
+cron:
+  定时任务
+
+  执行例子:
+    '1*****': 每分钟的 01 s 时启动
+    '11****': 每小时的 01 分 01 时启动
+    '11111*': 每 一月 的 第一天 的 01 时 01 分 01 秒 时启动
+
+  时间规则:
+    '秒 分 时 天 月 星期'
+
+  指定时间区:
+    看这里: https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/configurations.html#functions
+

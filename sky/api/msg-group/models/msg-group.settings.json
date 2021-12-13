@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "msg_groups",
+  "info": {
+    "name": "MsgGroup",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "named": {
+      "type": "string"
+    },
+    "status": {
+      "type": "boolean",
+      "default": true
+    },
+    "msg_sms": {
+      "via": "msg_group",
+      "collection": "msg-sms"
+    },
+    "category": {
+      "via": "msg_groups",
+      "model": "category"
+    },
+    "time_rule": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,121 @@
+
+$fs: 20px
+
+$h1: 2.375em
+$h2: 1.875em
+$h3: 1.5em
+$h4: 1.375em
+$h5: 1.125em
+
+// HTML
+$html_Txt: #111425
+.txt
+    color: $html_Txt
+    
+$html_Tip_Header: #929295
+.tih
+    color: $html_Tip_Header
+
+$html_Tip_Sub: #636571
+.tis
+    color: $html_Tip_Sub
+
+$html_Tip: #424b62
+.tip
+    color: $html_Tip
+// 
+$html_Hr: #e6e8ed
+.hr
+    border-bottom: 1px solid $html_Hr
+
+$html_Br: #c1c4cf
+.br
+    border-bottom: 1px solid $html_Br
+/// 
+
+$sub: #505050
+$sub_x2: #6A6A6A
+$sub_x3: #999999
+
+.sub
+    color: $sub
+.sub_x2
+    color: $sub_x2
+.sub_x3
+    color: $sub_x3
+
+.h,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+h1,
+h2,
+h3,
+h4,
+h5
+    line-height: 2em
+    font-weight: bold
+
+h1,
+.h1
+    font-size: $h1
+h2,
+.h2
+    font-size: $h2
+h3,
+.h3
+    font-size: $h3
+h4,
+.h4
+    font-size: $h4
+h5,
+.h5
+    font-size: $h5
+
+.fs-primary
+    color: $primary_Hover
+
+.fs-FFF
+    color: #FFF
+
+
+$success: #32b56b
+$success_Thin: #f4fff7
+$success_Hover: #2aa45f
+
+$success_Light: #bad2c4
+$success_Dark: #1c2721
+
+$new: #edbe2e
+$new_Thin: #fffcf3
+$new_Hover: #e3b428
+
+$new_Light: #c0b7af
+$new_Dark: #201e1c
+
+.cr_success
+    transition: all .1s ease-in-out
+    color: $success
+
+    &:hover
+        color: $success_Hover
+
+.cr_new
+    transition: all .1s ease-in-out
+    color: $new
+
+    &:hover
+        color: $new_Hover
+
+$error: #cd241b
+$error_Thin: #fff8f7
+$error_Hover: #c32018
+
+.input-error
+    outline-color: $error !important
+    border: 2px solid $error !important
+    box-shadow: 0px 0px 11px -3px rgba(255, 0, 8, 0.3)
+    animation: error_dump 2s steps(2, start) infinite !important
+

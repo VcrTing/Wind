@@ -1,0 +1,74 @@
+
+@import ./auth/auth
+@import ./contact/contact_plus
+
+$menuW: 230px
+    
+.layout_menu
+
+    background: $hui !important
+    
+    .menu
+        @extend .s4
+        z-index: 999
+        position: fixed
+        width: $menuW
+        height: 100vh
+        overflow-y: scroll
+        overflow-x: hidden
+        background: #FFF
+        border-right: 1px solid #e7eaed
+
+    .menu_overlay
+        z-index: 900
+        position: fixed
+        display: none
+        top: 0
+        left: -100vw
+        opacity: 0
+        bottom: 0
+        width: 100vw
+        background: rgba(0, 0, 0, 0.4)
+        
+    .content
+        min-height: 40vh
+        margin-left: $menuW + 24px
+        & > div
+            margin: 0 auto
+            max-width: 1366px
+
+.btn-trigger_ipad
+    // @extend .fx-c
+    z-index: 900
+    position: fixed
+    display: none
+    top: 80vh
+    left: -2px
+    min-width: 2.5em
+    min-height: 3.5em
+    border-radius: 4px
+    background: #FFF
+    padding: $dist_s $dist
+    box-shadow: -2px 1px 6px -3px rgba(0, 0, 0, 0.18)  
+    i
+        @extend .middle
+        width: 1em
+        height: 1em
+
+@media screen and ( max-width: 1081px )
+    
+    .menu_overlay,
+    .btn-trigger_ipad
+        display: inline-block !important
+
+    .layout_menu
+        .menu
+            left: - $menuW - $dist
+        .content
+            margin-left: 0px
+
+    .menu_view,
+    .menu_overlay_view
+        left: 0 !important
+        opacity: 1 !important
+

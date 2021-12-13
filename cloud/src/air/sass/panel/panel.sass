@@ -1,0 +1,36 @@
+
+.main-w
+    max-width: 1366px
+    margin: 0 auto
+
+.page
+    padding-top: 24px
+
+.panel-data
+    min-height: 50vh
+    align-items: self-start
+
+.panel,
+.panel_zero
+    width: 100%
+    padding-bottom: $dist_x2
+
+    & > div 
+        padding: $dist_s * 3
+        min-height: 10vh
+        background: #FFF
+        border-radius: 7px
+        position: relative
+        padding-bottom: $dist_x2
+        box-shadow: 2px 2px 4px -3px rgba(0, 0, 0, 0.10)
+
+    h5
+        @extend .tih
+        font-size: 0.87em
+    .h5
+        font-size: 0.87em
+        // color: #939598
+.panel_zero
+    & > div
+        padding: ($dist_s * 3) 0px
+        padding-top: 0px

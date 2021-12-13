@@ -1,0 +1,18 @@
+项目创建:
+  npx create-strapi-app NAME --quickstart
+
+项目更新:
+  https://strapi.io/documentation/developer-docs/latest/update-migration-guides/update-version.html
+
+启动项目:
+  # 预览模式
+  npm start
+  # 开发模式
+  npm run develop
+
+安装依赖:
+  sudo npm i strapi-utils --D
+  sudo npm i mysql --D
+
+修改项目 Logo:
+  # public/company-logo.png

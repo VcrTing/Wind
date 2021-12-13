@@ -1,0 +1,33 @@
+方法:
+  用于处理数据，
+  以及更方便的操作Api
+
+
+Strapi Util:
+  # const { } = require('strapi-utils')
+
+  parseMultipartData:
+    用于序列化时间
+  sanitizeEntity:
+    指定删除某模型里面的私有字段
+
+contentTypes:
+  isDraft:
+    用于判断该数据是否是 draft 状态
+
+    # const { isDraft } = require('strapi-utils').contentTypes;
+
+    用法:
+      通常用于 更新某数据时，判断数据是否 draft 状态
+
+
+    使用例子:
+      isDraft(
+        DATA,
+        strapi.models.NAME
+      )
+
+      # 返回 Boolean
+
+lodash:
+  拓展库

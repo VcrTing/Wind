@@ -1,0 +1,77 @@
+$primary: #0796dd
+$primary_Hover: #0685c5
+
+$primary_Thin: #eaf2f9
+$primary_Half: #9ad7f6
+$primary_Br: #d0f1ff
+
+$primary_Active: #209fd6
+
+$primary_Dark: #091e27
+
+.t-pri
+    @extend .s4
+    color: $primary
+    &:hover
+        color: $primary_Hover
+
+// SECONDARY
+$secondary_Light: #30dede // #17bef6
+$secondary: #1aaba6
+$secondary_Hover: #17a19c
+$secondary_Br: #eaf4f4
+
+$secondary_Thin: #f4ffff
+$secondary_Hui: #dce1e1 // #eaf1f1
+$secondary_Dark: #40403f
+$secondary_Dark_Hover: #323030
+
+// ACCENT
+$accent: #fdc749
+$accent_Half: #ffd59b // #e2b2a8
+$accent_Hover: #bc361b
+
+$accent_Thin: #f8f3f0
+
+$hui_Stand: #F2F2F2
+
+$hr: #E7E7E7
+
+$a: #298fb0
+$a_Hover: #2782a0
+$a_Visited: #6f1ab9
+
+.a
+    color: $a
+    &:hover
+        color: $a_Hover
+    &:visited
+        color: $a_Visited
+
+.bg_fff
+    background: #FFF
+
+$hui_Stand: #F2F2F2
+$hui_Primary: #ecf0f4
+
+$body_x2: #343738
+
+.cr_primary
+    color: $primary !important
+    *
+        color: $primary 
+    &:hover,
+    &:active
+        color: $primary_Hover !important
+        *
+            color: $primary_Hover
+
+.cr_accent
+    color: $accent !important
+    *
+        color: $accent 
+    &:hover,
+    &:active
+        color: $accent_Hover !important
+        *
+            color: $accent_Hover

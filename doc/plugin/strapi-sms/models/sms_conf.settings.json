@@ -1,0 +1,29 @@
+{
+    "kind": "singleType",
+    "collectionName": "sms_conf",
+    "info": {
+      "name": "Sms Conf",
+      "description": ""
+    },
+    "options": {
+      "increments": true,
+      "timestamps": true,
+      "draftAndPublish": true
+    },
+    "attributes": {
+      "api_key": {
+        "type": "string"
+      },
+      "api_token": {
+        "type": "string"
+      },
+      "api_sender": {
+        "type": "string"
+      },
+      "status": {
+        "type": "boolean",
+        "default": true
+      }
+    }
+  }
+  

@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "strapi_sms_api",
+  "info": {
+    "name": "SmsApi"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "api_key": {
+      "type": "string"
+    },
+    "api_token": {
+      "type": "string"
+    },
+    "sender": {
+      "type": "string"
+    },
+    "mark": {
+      "type": "string"
+    },
+    "company": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "boolean"
+    }
+  }
+}

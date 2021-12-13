@@ -1,0 +1,109 @@
+
+$hui: #eceeef // #e7ecec // 
+$hui_Sub: #f7fafa // #e7ecec // 
+$hui_Thin: #f9fbfc // #e7ecec // 
+
+* 
+    outline-color: transparent
+    background: none
+
+@import ./ui/color
+@import ./ui/font
+@import ./ui/other
+@import ./ui/distance
+@import ./other/mixin
+
+html 
+    color: $html_Txt
+    background: none // $hui_Html
+    font-size: $fs !important
+    background: $hui !important
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'Microsoft JhengHei', 'Source Han Sans SC', 'Noto Sans CJK SC', 'Source Han Sans CN', 'Source Han Sans TC', 'Noto Sans CJK TC', 'WenQuanYi Micro Hei', SimSun, sans-serif !important
+
+
+img
+    width: 100%
+    height: auto
+    border-radius: 1px
+    
+
+*
+    margin: 0
+    padding: 0
+
+    line-height: $h_Line
+    box-sizing: border-box
+
+::-webkit-scrollbar
+    width: 0px
+
+button 
+    padding: 0 $dist
+
+ul
+    list-style: none
+
+a
+    text-decoration: none
+
+.hand
+    cursor: pointer
+
+img 
+    width: 100%
+    height: auto
+    user-select: none
+    border-radius: $dist / 2
+
+.b
+    font-weight: bold
+
+.i
+    font-style: italic
+
+i 
+    cursor: pointer
+    user-select: none
+    display: inline-block
+
+.fs_r
+    text-align: right
+.fs_c
+    text-align: center
+
+.btn,
+button
+    cursor: pointer
+    user-select: none
+    background: none
+    border: 2px solid transparent
+
+.in
+    display: inline
+.inb
+    display: inline-block
+
+.main-w
+    margin: 0 auto
+    max-width: 714px !important
+
+.main-w_XL
+    margin: 0 auto
+    max-width: 1080px !important
+
+.main-w_XXL
+    margin: 0 auto
+    max-width: 1366px !important
+
+
+.unus
+    user-select: none
+
+hr
+    height: 0
+    width: 100%
+    border: none
+    display: block 
+    border-bottom: 1px solid $hr
+
+@import ./lunching.sass
